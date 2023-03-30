@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ManageCustomerContext" prefHeight="501.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.supermarket.controller.CustomerManageFormController">
+   <children>
+      <Label layoutX="194.0" layoutY="14.0" text="MANAGE CUSTOMERS" underline="true">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="13.0" layoutY="81.0" prefHeight="414.0" prefWidth="285.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Customer ID :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCusID" layoutX="122.0" layoutY="41.0" promptText="Customer_Id" />
+            <Label layoutX="14.0" layoutY="72.0" text="Customer Name :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCusName" layoutX="122.0" layoutY="99.0" promptText="Customer_Name" />
+            <Label layoutX="14.0" layoutY="135.0" text="Customer Address :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCusAddress" layoutX="122.0" layoutY="162.0" promptText="Customer_Address" />
+            <Label layoutX="14.0" layoutY="197.0" text="Customer Salary :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCustomerSalary" layoutX="122.0" layoutY="224.0" promptText="Customer_Salary" />
+            <Button layoutX="14.0" layoutY="269.0" mnemonicParsing="false" onAction="#AddCustomerOnAction" prefHeight="39.0" prefWidth="94.0" style="-fx-background-radius: 15px;" text="ADD" textFill="#0f1eed">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="151.0" layoutY="269.0" mnemonicParsing="false" onAction="#UpdateCustomerOnAction" prefHeight="39.0" prefWidth="106.0" style="-fx-background-radius: 15px;" text="UPDATE" textFill="#0f1eed">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="77.0" layoutY="323.0" mnemonicParsing="false" onAction="#DeleteCustomerOnAction" prefHeight="39.0" prefWidth="106.0" style="-fx-background-radius: 15px;" text="DELETE" textFill="#0f1eed">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="14.0" layoutY="368.0" mnemonicParsing="false" onAction="#ClearOnAction" prefHeight="39.0" prefWidth="94.0" style="-fx-background-radius: 15px;" text="CLEAR" textFill="#0f1eed">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="162.0" layoutY="368.0" mnemonicParsing="false" onAction="#RefreshOnAction" prefHeight="39.0" prefWidth="94.0" style="-fx-background-radius: 15px;" text="REFESH" textFill="#0f1eed">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tbCustomer" layoutX="305.0" layoutY="132.0" prefHeight="347.0" prefWidth="413.0">
+        <columns>
+          <TableColumn fx:id="colCusID" prefWidth="83.0" text="Cus_Id" />
+          <TableColumn fx:id="colCusName" prefWidth="100.0" text="Cus_Name" />
+            <TableColumn fx:id="colCusAddress" prefWidth="101.33331298828125" text="Cus_Address" />
+            <TableColumn fx:id="colCusSalary" prefWidth="128.33331298828125" text="Cus_Salary" />
+        </columns>
+      </TableView>
+      <Label layoutX="422.0" layoutY="91.0" text="Customer_Search :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="579.0" layoutY="92.0" onAction="#searchCustomerOnAction" prefHeight="25.0" prefWidth="138.0" promptText="Search_Customer" />
+      <ImageView fitHeight="72.0" fitWidth="94.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/Customer.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="607.0" layoutY="21.0" mnemonicParsing="false" onAction="#backToMenuOnAction" prefHeight="39.0" prefWidth="106.0" style="-fx-background-radius: 15px;" text="MENU" textFill="#0f1eed">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
